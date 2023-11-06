@@ -1,0 +1,10 @@
+{% for product in collections['all'].products %}
+    <a href="{{ product.url }}"><div>
+        <img src="{{ product.featured_image |  image_url  }}" alt="" srcset="">
+        <h3>{{ product.title }}</h3>
+        <p>{{ product.price | money }}</p>
+    </div> </a>
+
+    
+  {% endfor %}
+

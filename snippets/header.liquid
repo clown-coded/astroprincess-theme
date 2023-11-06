@@ -1,0 +1,9 @@
+<header>
+    <img src="{{ 'logo.png' |  asset_url }}" class="logo">
+
+    <ul>
+        {% for link in linklists.main-menu.links -%}
+           <li> {{ link.title | link_to: link.url }} </li>
+          {%- endfor %}
+    </ul>
+</header>
